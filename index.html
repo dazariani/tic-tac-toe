@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tic Tac Toe</title>
+  </head>
+
+  <body>
+    <div class="wrapper hidden">
+      <header>
+        <div class="head-box flex-row">
+          <div class="logo-box">
+            <img src="images/logo.svg" alt="" class="logo x-logo" />
+          </div>
+          <div class="turn-box bg-dark-green flex-row">
+            <img
+              class="turn-icon grey-filter icon-x"
+              src="images/x-turn.svg"
+              alt="x turn"
+            />
+            <img
+              class="turn-icon grey-filter icon-o hidden"
+              src="images/o-turn.svg"
+              alt="o turn"
+            />
+            <span class="turn-text">TURN</span>
+          </div>
+          <div class="restart-icon-box bg-grey">
+            <img
+              src="images/icon-restart.svg"
+              alt="restart icon"
+              class="restart-icon"
+            />
+          </div>
+        </div>
+      </header>
+      <!--  -->
+      <section class="main-board-sec">
+        <div class="board-box">
+          <div class="cell cell-1" id="1">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-2" id="2">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-3" id="3">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-4" id="4">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-5" id="5">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-6" id="6">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-7" id="7">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-8" id="8">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+          <div class="cell cell-9" id="9">
+            <img class="x-mark hidden" src="images/icon-x.svg" alt="x mark" />
+            <img class="o-mark hidden" src="images/icon-o.svg" alt="o mark" />
+            <img
+              class="x-outline hidden"
+              src="images/icon-x-outline.svg"
+              alt="x outline"
+            />
+            <img
+              class="o-outline hidden"
+              src="images/icon-o-outline.svg"
+              alt="o outline"
+            />
+          </div>
+        </div>
+        <div class="score-box flex-row">
+          <div class="x-player-box score flex-col bg-cyan-dark">
+            <span class="x-name name">X (P2)</span>
+            <span class="x-score score-num">0</span>
+          </div>
+          <div class="ties-box score flex-col bg-grey">
+            <span class="ties-name name">TIES</span>
+            <span class="ties-score score-num">0</span>
+          </div>
+          <div class="o-player-box score flex-col bg-orange-dark">
+            <span class="o-name name">O (P1)</span>
+            <span class="o-score score-num">0</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- new game menu -->
+    <div class="menu-wrapper">
+      <div class="menu-container flex-col">
+        <img src="images/logo.svg" alt="menu logo" class="menu-logo" />
+        <div class="pick-mark-box">
+          <span class="pick-mark-text">PICK PLAYER 1’S MARK</span>
+          <div class="marks-box flex-row">
+            <div class="x-mark-box bg-dark-green mark-box">
+              <img
+                src="images/x-turn.svg"
+                alt="x mark"
+                class="x-mark-pick grey-filter mark"
+              />
+            </div>
+            <div class="o-mark-box bg-dark-green mark-box">
+              <img
+                src="images/o-turn.svg"
+                alt="o mark"
+                class="o-mark-pick grey-filter mark"
+              />
+            </div>
+          </div>
+          <span class="x-first-text">REMEMBER : X GOES FIRST</span>
+        </div>
+        <div class="menu-btn-box flex-col">
+          <button class="vs-cpu vs-btn">NEW GAME (VS CPU)</button>
+          <button class="vs-player vs-btn">NEW GAME (VS PLAYER)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- page mask -->
+    <div class="page-mask hidden"></div>
+
+    <!-- win or lose window -->
+    <div class="w-l-window flex-col hidden">
+      <span class="win-text">PLAYER 1 WINS!</span>
+      <div class="round-take-box flex-row">
+        <img src="images/icon-o.svg" alt="icon o" class="w-l-icon o" />
+        <img src="images/icon-x.svg" alt="icon x" class="w-l-icon x hidden" />
+        <span class="round-take-text">TAKES THE ROUND</span>
+      </div>
+      <div class="w-l-button-box">
+        <button class="w-l-button quit">QUIT</button>
+        <button class="w-l-button next">NEXT ROUND</button>
+      </div>
+    </div>
+
+    <!-- round tied window -->
+    <div class="tied-window flex-col hidden">
+      <span class="tied-text">ROUND TIED</span>
+      <div class="tied-button-box">
+        <button class="tied-button quit">QUIT</button>
+        <button class="tied-button next">NEXT ROUND</button>
+      </div>
+    </div>
+
+    <!-- restart window -->
+    <div class="restart-window flex-col hidden">
+      <span class="restart-text">RESTART GAME?</span>
+      <div class="restart-button-box">
+        <button class="restart-button no-btn">NO, CANCEL</button>
+        <button class="restart-button yes-btn">YES, RESTART</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
